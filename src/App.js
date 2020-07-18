@@ -35,10 +35,10 @@ function App() {
 
 
   return (
-    <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch}  />
-      <button className="search-button" type="submit">Search</button>
+    <div className=" App container my-5">
+      <form onSubmit={getSearch} className="form-group">
+        <input className="form-control py-4 border border-primary outline-none" type="text" value={search} onChange={updateSearch}  />
+        <button className="btn btn-primary mt-1 btn-lg px-5" type="submit">Search</button>
       </form>
       {recipes.map(recipe => (
         <Recipe key={recipe.recipe.label} title={recipe.recipe.label} calories={recipe.recipe.calories} image={recipe.recipe.image} ingredients={recipe.recipe.ingredients} />
